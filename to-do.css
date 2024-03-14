@@ -1,0 +1,177 @@
+*{
+    margin: 0;padding: 0;;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+  
+    padding: 10px;
+
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2{
+    color: #002756;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius:30px;
+    padding-left: 20px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline:none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button{
+    border: none;
+    outline:none;
+    background: rgb(255, 10, 10);
+    font-size: 16px;
+    padding: 16px 50px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(https://tse4.mm.bing.net/th?id=OIP.9lGv7eQyy-nX_Os5dCBdigHaHa&pid=Api&P=0&h=180);
+    background-size: cover;
+    background-size: cover;
+    background-position:center;
+    top: 12px;
+    left: 8px;
+
+
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(https://cdn0.iconfinder.com/data/icons/simply-orange-1/128/Artboard_9svg-512.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40pz;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background:#edeef0 ;
+}
+
+/* Existing styles ... */
+
+/* Media queries for improved responsiveness */
+
+/* Small devices (phones, 600px and below) */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 5px;
+    }
+
+    .todo-app {
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+        padding-left: 10px;
+    }
+
+    input {
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100;
+        align-items: self-start;
+    }
+
+    ul li {
+        padding: 12px;
+    }
+}
+
+/* Medium devices (tablets, 601px to 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .container {
+        padding: 10px;
+    }
+
+    .todo-app {
+        padding: 30px;
+    }
+
+    ul li {
+        padding: 15px;
+    }
+}
+
+Large devices (laptops/desktops, 901px and above)
+@media only screen and (min-width: 901px) {
+    .container {
+        padding: 20px;
+    }
+
+    .todo-app {
+        padding: 40px;
+    }
+
+    ul li {
+        padding: 20px;
+    }
+}
+
